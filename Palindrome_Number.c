@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int n,arr[100],temp[100],d,rev[100],i;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+        rev[i]=0;
+    }
+    for(i=0;i<n;i++)
+    {
+        temp[i]=arr[i];
+        while(temp[i])
+        {
+            d=temp[i]%10;
+            rev[i]=rev[i]*10+d;
+            temp[i]=temp[i]/10;
+        }
+        if(arr[i]==rev[i])
+        {
+            printf("True
+");
+        }
+        else
+        {
+            printf("False
+");
+        }
+    }
+}
