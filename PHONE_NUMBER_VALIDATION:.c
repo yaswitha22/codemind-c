@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    long int n,d,c=0,rem=0,k=0;
+    scanf("%ld",&n);
+    while(n>0)
+    {
+        d=n%10;
+        n=n/10;
+        rem=rem*10+d;
+        c++;
+    }
+    if(c==10)
+    {
+        if(rem!=0)
+        {
+            d=rem%10;
+        }
+        if(d==0)
+            {
+                printf("Invalid");
+            }
+            else
+            {
+                printf("Valid");
+            }
+    }
+    else
+    {
+        printf("Invalid");
+    }
+}
