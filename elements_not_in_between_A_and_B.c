@@ -1,33 +1,29 @@
 #include<stdio.h>
 int main()
 {
-    int n,a[100],i,k=0,b[100],x,y,c=0;
+    int n,arr[100],i,j,a,b,k=0,c=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
-    scanf("%d%d",&x,&y);
+    scanf("%d%d",&a,&b);
     for(i=0;i<n;i++)
     {
-        if(a[i]>=x && a[i]<=y)
+        if(arr[i]>=a && arr[i]<=b)
         {
             continue;
         }
         else
-        {
-        b[k]=a[i];
-        k++;
-        }
         
-    }
-    for(i=0;i<k;i++)
-    {
-        printf("%d ",b[i]);
+        {
         c++;
+         printf("%d ",arr[i]);
+       }
     }
     if(c==0)
     {
         printf("-1");
     }
+    return 0;
 }
