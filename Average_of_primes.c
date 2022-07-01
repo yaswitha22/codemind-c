@@ -1,29 +1,39 @@
 #include<stdio.h>
+int fun(int num)
+{
+    int i,fc=0;
+    for(i=1;i<=num;i++)
+	{
+		if(num%i==0)
+		{
+			fc++;	
+		}	
+	}
+	if(fc==2)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
 int main()
 {
-    int n,arr[100],c=0,i,j,sum=0,k=0;
-    float avg=0.0;
+    int n,a[100],i;
+    float sum=0,c=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&a[i]);
     }
     for(i=0;i<n;i++)
     {
-        for(j=1;j<=arr[i];j++)
+        if(fun(a[i]))
         {
-            if(arr[i]%j==0)
-            {
-                c++;
-            }
+            sum+=a[i];
+            c+=1;
         }
-        if(c==2)
-        {
-            sum+=arr[i];
-            k++;
-        }
-        c=0;
     }
-    avg=sum/(float)k;
-    printf("%.2f",avg);
+    printf("%.2f",sum/c);
 }
