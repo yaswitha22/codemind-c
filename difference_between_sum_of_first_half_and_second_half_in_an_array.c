@@ -1,21 +1,21 @@
 #include<stdio.h>
-#include<math.h>
+#include<stdlib.h>
 int main()
 {
-    int n,diff=0,s1=0,s2=0,i,arr[100];
+    int n,arr[100],i,s1=0,s2=0,m;
     scanf("%d",&n);
+    m=n/2;
     for(i=0;i<n;i++)
     {
         scanf("%d",&arr[i]);
     }
-    for(i=0;i<n/2;i++)
+    for(i=0;i<m;i++)
     {
         s1+=arr[i];
     }
-    for(i=(n/2);i<n;i++)
+    for(i=m;i<n;i++)
     {
         s2+=arr[i];
     }
-    diff=abs(s2-s1);
-    printf("%d",diff);
+    printf("%d",abs(s1-s2));
 }
