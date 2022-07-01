@@ -1,7 +1,18 @@
 #include<stdio.h>
+int ispal(int n)
+{
+    int temp=n,d,rev=0;
+    while(n)
+    {
+        d=n%10;
+        rev=rev*10 +d;
+        n=n/10;
+    }
+    return rev;
+}
 int main()
 {
-    int n,arr[100],i,c=0,rev=0,temp=0,d;
+    int n,arr[100],i,c=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
@@ -9,14 +20,8 @@ int main()
     }
     for(i=0;i<n;i++)
     {
-        temp=arr[i];
-        while(arr[i])
-        {
-            d=arr[i]%10;
-            rev=rev*10+d;
-            arr[i]=arr[i]/10;
-        }
-        printf("%d ",rev);
-        rev=0;
+        c=0;
+        c=ispal(arr[i]);
+        printf("%d ",c);
     }
 }
