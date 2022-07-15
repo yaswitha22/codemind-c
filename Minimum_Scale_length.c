@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,arr[100],j,min=9999,res=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+       scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+       if(min>arr[i])
+       {
+           min=arr[i];
+       }
+    }
+    for(i=min;i>=1;i--)
+    {
+      res=0;
+      for(j=0;j<n;j++)
+      {
+          if(arr[j]%i!=0)
+          {
+              res=1;
+              break;
+          }
+      }
+      if(res==0)
+      {
+          printf("%d",i);
+          break;
+      }
+    }
+}
