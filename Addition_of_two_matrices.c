@@ -1,4 +1,4 @@
- #include<stdio.h>
+#include<stdio.h>
 #include<math.h>
 int main()
 {
@@ -22,8 +22,8 @@ int main()
     {
         for(j=0;j<n;j++)
         {
-        printf("%d",b[i][j]+a[i][j]);
-        if(j<n-1)
+        printf("%d",(b[i][j]+a[i][j]));
+         if(j<n-1)
         {
             printf(" ");
         }
